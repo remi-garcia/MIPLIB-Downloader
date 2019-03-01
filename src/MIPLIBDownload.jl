@@ -1,5 +1,5 @@
 function miplibdownloadfromcsv()
-    files = readdir("csv/")
+    files = readdir("../csv/")
     csvFiles = Vector{String}()
     for file in files
         if length(file) > 4
@@ -19,7 +19,7 @@ function miplibdownloadfromcsv()
                 line = readline(instances)
                 instance = split(line, ',')[1][2:(end-1)]
                 try
-                    download(url*instance*".mps.gz", dirName*"/"*instance*".mps.gz")
+                    download(url*instance*".mps.gz", "../"dirName*"/"*instance*".mps.gz")
                 catch
                     @warn "Download from "*url*instance*".mps.gz did not work"
                 end

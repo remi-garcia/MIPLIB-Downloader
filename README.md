@@ -9,6 +9,14 @@ Script that download instances from MIPLIB base on csv.
 julia 1.0.0</br>
 curl or wget
 
+### Testing
+After cloning this repository try it:</br>
+```julia
+julia> include("MIPLIBDownload.jl")
+julia> miplibdownloadfromcsv()
+```
+This should download 11 instances from MIPLIB in a new "Test Set" folder
+
 ### Example
 To download the specific set "Binary Set" from MIPLIB :</br>
 Get the list here : https://miplib.zib.de/set_binary.html</br>

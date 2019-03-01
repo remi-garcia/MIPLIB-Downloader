@@ -1,4 +1,7 @@
 # MIPLIB-Downloader
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 Script that download instances from MIPLIB base on csv.
 
 ### Prerequisites

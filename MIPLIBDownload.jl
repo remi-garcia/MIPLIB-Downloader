@@ -19,9 +19,9 @@ function miplibdownloadfromcsv()
                 line = readline(instances)
                 instance = split(line, ',')[1][2:(end-1)]
                 try
-                    download(url*instance*".gz", dirName*"/"*instance*".gz")
+                    download(url*instance*".mps.gz", dirName*"/"*instance*".mps.gz")
                 catch
-                    @warn "Download from "*url*instance*".gz did not work"
+                    @warn "Download from "*url*instance*".mps.gz did not work"
                 end
             end
         end

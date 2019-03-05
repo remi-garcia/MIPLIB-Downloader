@@ -12,14 +12,14 @@ function miplibdownloadfromcsv()
     url = "https://miplib.zib.de/WebData/instances/"
     for file in csvFiles
         dirName = file[1:(end-4)]
-        mkdir(dirName)
-        open("csv/"*file) do instances
+        mkdir("../"*dirName)
+        open("../csv/"*file) do instances
             readline(instances)
             while !eof(instances)
                 line = readline(instances)
                 instance = split(line, ',')[1][2:(end-1)]
                 try
-                    download(url*instance*".mps.gz", "../"dirName*"/"*instance*".mps.gz")
+                    download(url*instance*".mps.gz", "../"*dirName*"/"*instance*".mps.gz")
                 catch
                     @warn "Download from "*url*instance*".mps.gz did not work"
                 end

@@ -17,7 +17,7 @@ function miplibdownloadfromcsv()
             readline(instances)
             while !eof(instances)
                 line = readline(instances)
-                instance = split(line, ',')[1][2:(end-1)]
+                instance = strip(split(line, ',')[1], [' ', '"', '\n'])
                 try
                     download(url*instance*".mps.gz", "../"*dirName*"/"*instance*".mps.gz")
                 catch
